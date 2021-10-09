@@ -15,6 +15,9 @@ Following [here](https://pythonhosted.org/PyDrive/quickstart.html) to configure 
 * download a single file
   
 ```python
+from GoogleDriveDownloader import GoogleDriveDownloader
+downloader = GoogleDriveDownloader()
+
 fid = downloader.search_target_file('filename')
 downloader.download_target_file(fid, 'local/dir/filename')
 ```
@@ -22,7 +25,6 @@ downloader.download_target_file(fid, 'local/dir/filename')
 * download all files in a folder from Google Drive
 
 ```python
-downloader = GoogleDriveDownloader()
 download_dir = 'local/dir'
 foldername = 'foldername'
 downloader.download_files_in_folder(foldername, download_dir, parallel=True)
